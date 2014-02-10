@@ -1,0 +1,52 @@
+ h1 {
+	font-family: 'Caesar Dressing', cursive;
+	margin-left: 30%;
+	display: inline;
+}
+.cool {
+	width:290px;
+	height:280px;
+	position: absolute;
+	z-index: 20;
+	opacity: 1;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.lighter {
+	opacity: 0.5;
+}
+img {
+	width:210px;
+	height:230px;
+}
+.container{
+	width: 215px;
+	height:230px;
+	display: inline-block;
+}
+.container1{
+	width: 215px;
+	height:230px;
+	display: inline-block;
+}
+#tabs-4{
+	background-image: url('burningmans.jpg');	
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+}
+body {
+	background-image: url('VWkzVdY - Imgur.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+}
+#tabs-1 {
+	background-color: #FFECC5;
+}
+#tabs-2 {
+	background-color: #FFECC5;
+}
+#tabs-3 {
+	background-color: #FFECC5;
+}

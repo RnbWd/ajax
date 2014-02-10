@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Face Swapper</title>
+
+	<link rel="stylesheet" type="text/css" href="face.css">
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery-ui.css">
+   <script type="text/javascript" src="jquery-2.0.3.js"></script>
+   <script type="text/javascript" src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+
+	<script>
+	$('document').ready(function(){
+		$( "#dialog").dialog();
+		$(".da").hide();
+		$('img').click(function(){
+			$(this).hide();
+			$(this).siblings().show();
+			return false;
+			});
+		$( "#m" ).sortable({
+      	placeholder: "ui-state-highlight"
+    	});
+   		$( "#m" ).disableSelection();
+
+		$( "#d" ).sortable({
+      	placeholder: "ui-state-highlight"
+    	});
+    	$( "#d" ).disableSelection();
+  	});
+
+	</script>
+</head>
+<body>
+	
+	<a id= "ff" href="homepage.html">Homepage</a>
+	<div id="dialog" title="O_o">
+	   <p>Click to Switch - Drag n'Drop</p>
+   </div>
+	<ul id="m">
+	  <li class="ui-state-default"><img class = "mi" src="m-1.jpg"><img class = "da" src="d-1.jpg"></li>
+	  <li class="ui-state-default"><img class = "mi"src="m-2.jpg"><img class = "da"src="d-2.jpg"></li>
+	  <li class="ui-state-default"><img class = "mi"src="m-3.jpg"><img class = "da"src="d-3.jpg"></li>
+	  <li class="ui-state-default"><img class = "mi"src="m-4.jpg"><img class = "da"src="d-4.jpg"></li>
+	  <li class="ui-state-default"><img class = "mi"src="m-5.jpg"><img class = "da"src="d-5.jpg"></li>
+	</ul>
+	
+</body>
+</html>

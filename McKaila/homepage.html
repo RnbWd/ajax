@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Homepage</title>
+   <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+
+   <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="homepage.css">
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery-ui.css">
+   <script type="text/javascript" src="jquery-2.0.3.js"></script>
+   <script type="text/javascript" src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+
+   <script>
+    $('document').ready(function(){
+
+      $( "#accordion" )
+      .accordion({
+      collapsible: true
+      });
+      $( "#date" ).datepicker();
+      $('#form').submit(function(){
+         var date = $('#date').val();
+         var time = $('#time').val();
+         $("#dates").addClass("da").append("<p>Updated Callender:</p>" + date + " " + time + " <br>");
+         $("#dates p").fadeOut(3000);
+            return false
+      });
+    });
+  </script>
+
+</head>
+<body>
+   <img id="wow" src="us5.jpg"/>
+   <h1>Love Grattitude Forgiveness</h1>
+  <div id="dates">
+
+   </div>
+   <div id="main">
+   
+   <div id="accordion">
+      <h3>Intro</h3>
+      <div>
+         <p>Happy Aniversary!! Below is a list of clickable, unclickable, finished, unfinished, linked-in, linked-out... stuff. Enjoy :) </p>
+      </div>
+      <h3>Memories</h3>
+      <div>
+         <p>The last 6 months have been AMAZING!! Here's a page of pics: 
+         <a class ="btn" href="memories.html">Click Me Por FAVOR</a>
+      </div>
+      <h3>Face Swapper</h3>
+      <div>
+         <p>This is probably the weirdest page on the website.</p>
+         <a href="face.html">Try it out!</a>
+      </div>
+      <h3>Note</h3>
+      <div>
+         <p>You are amazing, I love you. Dating ain't easy, but it's enjoyable with you ;)</p>
+      </div>
+      <h3>Dates</h3>
+      <div>
+         <p>Schedule some dates with me :) </p>
+      <form id="form">
+      Date: <input type="text" id="date" />
+      <select id="time" name="time">
+      <option value="Morning">Morning</option>
+      <option value="Afternoon">Afternoon</option>
+      <option value="Night">Night</option>
+      </select>
+
+      <input type="submit" id="submit" />
+       </form>
+      </div>
+      <h3>More?</h3>
+      <div>
+         <p>I will continue to update this for fun, because having ONE BIG LOVE website is better than 20 notes, IMO. I can put this on the internets if you wants. Let me know if you want me to make you anything :)</p>
+      </div>
+      
+   </div>
+   </div>
+   
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Easy Exercise</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('document').ready(function() {
+
+			$('#add').click(function() {
+				var a = parseInt($('#a').val());
+				var b = parseInt($('#b').val());
+				alert(a  + " + " + b + " = " + (a+b));
+				$('#list').append(a  + " + " + b + " = " + (a+b) + '<br>');
+				return false;	
+			});
+		});
+	</script>
+</head>
+<body>
+<h1>Easy</h1>
+<select id="a">
+  <option value = '1'>1</option>
+  <option value = '2'>2</option>
+  <option value = '3'>3</option>
+  <option value = '4'>4</option>
+  <option value = '5'>5</option>
+  <option value = '6'>6</option>
+  <option value = '7'>7</option>
+  <option value = '8'>8</option>
+  <option value = '9'>9</option>
+</select>
++
+<select id="b">
+  <option value = '1'>1</option>
+  <option value = '2'>2</option>
+  <option value = '3'>3</option>
+  <option value = '4'>4</option>
+  <option value = '5'>5</option>
+  <option value = '6'>6</option>
+  <option value = '7'>7</option>
+  <option value = '8'>8</option>
+  <option value = '9'>9</option>
+</select>
+<br>
+<br>
+<button id="add">Add</button>
+<h3>List of Problems:</h3>
+<div id="list">
+
+</div>
+</body>
+</html>

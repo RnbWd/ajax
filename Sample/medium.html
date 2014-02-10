@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Medium Exercise</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('document').ready(function() {
+			$('#a').click(function(){
+				$(this).siblings().toggle();
+			});
+
+			$('#c').hover(function() {
+				$(this).siblings().toggle();
+			});
+
+			$('#e').click(function() {
+				$('img').replaceWith($('#blue'));
+			});
+			var count=0;
+			$('#d').click(function() {
+				count++;
+				$('#counter').text(count);
+			});
+			$('#b').click(function(){
+				$('#a, #c, #e').toggleClass("blue");
+			});
+			$('#f').hover(function(){
+				$('#a,#b,#c,#d,#e').replaceWith($('#a'));
+			});
+		});
+	</script>
+</head>
+<body> 
+	<style>
+	.blue {
+		width: 200px;
+	}
+	</style>
+	Counter:
+	<div id="counter">
+
+	</div>
+	<div id="top">
+		<img id="a" src = "aa.jpg" alt="img" height = "100" width = "150">
+		<img id="b" src = "bb.jpg" alt="img" height = "100" width = "150">
+	</div>
+	<div id="middle">
+		<img  id="c"src = "cc.jpg" alt="img" height = "100" width = "150" >
+		<img  id="d" src = "dd.jpg" alt="img" height = "100" width = "150">
+	</div>
+		<img id = "e" src = "ee.jpg" alt="img" height = "100" width = "150">
+		<img id = "f" src = "hh.jpg" alt="img" height = "100" width = "150">
+		<br><br><br><br><br><br><br><br><br><br><br>
+		<img id="blue" src= "blue.png" height="100" width="150">
+</body>
+</html>

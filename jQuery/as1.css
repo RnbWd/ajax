@@ -1,0 +1,15 @@
+* {
+	background-color: grey;
+}
+#container img {
+	height: 200px;
+	width: 230px;
+	margin: 10px;
+}
+#container {
+	width: 1200px;
+}
+#btn {
+	background-color: green;
+	color: yellow;
+}

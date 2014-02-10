@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>The JQuery Index</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script>
+		$('document').ready(function() {
+
+//hides/shows paragraph -----------------------
+
+			$('#btn1').click(function() {
+				$('#a').hide(500);
+			});
+
+			$('#btn2').click(function() {
+				$('#a').show(500);
+			});
+
+			$('#btn3').click(function() {
+				$('#a').toggle(500);
+			});
+
+//slides paragraph up/down ---------------------
+
+			$('#btn4').click(function() {
+				$('#b').slideUp();
+			});
+
+			$('#btn5').click(function() {
+				$('#b').slideDown();
+			});
+
+			$('#btn6').click(function() {
+				$('#b').slideToggle();
+			});
+
+//fades paragraph -------------------------------
+
+			$('#btn7').click(function() {
+				$('#c').fadeOut(500);
+			});
+
+			$('#btn8').click(function() {
+				$('#c').fadeIn(500);
+			});
+//changes h1 class-------------------------------
+
+			$('#btn9').click(function() {
+				$('h1').addClass("header");
+			});
+//add h3 before/after/append----------------------
+
+			$('#btn10').click(function() {
+				$('p').before("<h3>BEFORE</h3>");
+			});
+			$('#btn11').click(function() {
+				$('p').after("<h3>AFTER</h3>");
+			});
+			$('#btn12').click(function() {
+				$('p').append(" append");
+			});
+//change img scr attribute-------------------------
+			$('#btn13').click(function() {
+				$('img').attr("src","http://photos1.blogger.com/blogger/2088/2881/1600/Image124.4.jpg");
+			});
+//submit/text/html-----------------------------------
+			$("form").submit(function() {
+  				if ($("input").val() == "YES") {
+   					$("span").html("Yes You Are <img src='norris.gif' alt='norris'>").show().fadeOut(7000);
+    				return false;	
+  				} else {
+  					$("span").text("Not valid!").show().fadeOut(2000);
+  					return false;
+  				}
+  			});	
+//focus-----------------------------------------
+  			$("input[type=text]").focus(function(){
+  				$("span").html("<img src='crazy.gif' alt='crazy' height = '100' width = '150'>").fadeOut(5000);
+  			});
+//serialize--------------------------------------
+  			function showValues() {
+     			var str = $("form").serialize();
+     			$("#results").text( str );
+  			}
+    		$("input[type='checkbox'], input[type='radio']").on( "click", showValues );
+    		$("select").on( "change", showValues );
+    			showValues();
+		});
+	</script>
+</head>
+<body>
+	<style>
+		.header {
+			background-color: black;
+			color: white;
+			font-family: "Comic Sans MS";
+		}
+	</style>
+	<h1>This is Way we Ball</h1>
+	 <button id="btn9">Change h1 class</button>
+	 <button id='btn10'>Before</button>
+	 <button id='btn11'>After</button>
+	 <button id='btn12'>Append to Paragraph</button>
+	 <br>
+	<p id='a'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet massa vel semper convallis. Curabitur facilisis feugiat tellus ut hendrerit. Nunc consequat libero vel molestie ultricies. Donec malesuada cursus sem sit amet rhoncus. In hac habitasse platea dictumst. Phasellus luctus mi eget tortor viverra imperdiet. Phasellus dolor metus, feugiat ut nisi posuere, dapibus commodo mauris. In mattis libero ut velit pharetra pharetra nec a turpis. Proin mi eros, imperdiet vel enim vitae, tempor dictum nisl. Etiam euismod libero vestibulum, pulvinar diam eget, rutrum magna. Praesent eget dui non libero ullamcorper volutpat vel eget sapien.</p>
+	<button id="btn1">Hide paragraph</button>
+    <button id="btn2">Show paragraph</button>
+    <button id="btn3">Toggle paragraph</button>
+    <br>
+	<p id='b'>Etiam lacinia quis neque et volutpat. Sed posuere tempor magna, in convallis nisi rhoncus sit amet. Maecenas vel dictum ligula. Aenean tincidunt purus non convallis lobortis. Aenean a velit mi. Nulla porta consequat nulla, vitae tempor velit mattis ut. Etiam vulputate dolor dui, ac congue dolor dignissim quis. Morbi aliquet dolor eu bibendum ullamcorper. Praesent iaculis mattis mi sit amet ornare.</p>
+	<button id="btn4">slideUp paragraph</button>
+    <button id="btn5">slideDown paragraph</button>
+    <button id="btn6">slideToggle paragraph</button>
+    <br>
+	<p id='c'>Aliquam sodales sem ut imperdiet congue. Donec eget leo lacus. Nullam egestas sapien sit amet turpis lacinia pharetra. Aliquam suscipit aliquam ligula ut consectetur. Nunc a erat non tortor aliquam lacinia. Sed interdum pretium justo non cursus. Morbi magna urna, iaculis quis accumsan vitae, fringilla et libero. Duis ultricies sem eget ante fringilla tristique. Praesent eleifend feugiat euismod. Nulla sapien magna, mattis at mauris eget, interdum facilisis ipsum. Ut id nibh velit. Etiam vehicula posuere tempus. Sed tristique ipsum et dui venenatis blandit.</p>
+	<button id="btn7">fadeOut paragraph</button>
+    <button id="btn8">fadeIn paragraph</button>
+	<br><br>
+
+	<form>
+		Are You Amazing? <input type="text" placeholder="Enter the word 'YES'"/>
+		<span></span>
+	</form>
+
+	<button id="btn13">Change IMG src attribute</button><br>
+	<img src="http://photos1.blogger.com/blogger/2088/2881/1600/Image123.8.jpg" alt="spaceOdyssey" height = "200" width = "300">
+
+	<form>
+    <select name="single">
+  	    <option>Single</option>
+  	    <option>Single2</option>
+  	</select>
+  	<br />
+  	<select name="multiple" multiple="multiple">
+  	    <option selected="selected">Multiple</option>
+  	    <option>Multiple2</option>
+  	 
+  	    <option selected="selected">Multiple3</option>
+  	</select>
+  	<br/>
+    <input type="checkbox" name="check" value="check1" id="ch1"/>
+ 	<label for="ch1">check1</label>
+  	 
+  	<input type="checkbox" name="check" value="check2" checked="checked" id="ch2"/>
+  	<label for="ch2">check2</label>
+  	<br />
+  	<input type="radio" name="radio" value="radio1" checked="checked" id="r1"/>
+  	 
+  	<label for="r1">radio1</label>
+    <input type="radio" name="radio" value="radio2" id="r2"/>
+  	 
+  	<label for="r2">radio2</label>
+	</form>
+<p><tt id="results"></tt></p>
+</body>
+</html>

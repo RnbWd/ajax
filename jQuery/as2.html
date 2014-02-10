@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Asignment 2</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="as2.css" />
+
+	<script>
+		$('document').ready(function(){
+			$( "#from, #date" ).datepicker();
+    	
+    	$('#form').submit(function(){
+      	var from = $('#from').val();
+    		var date = $('#date').val();
+    		$("#info").addClass("wow");
+    		$("#info").html("Your form information: <br>From: "+ from + "<br>To: " + date)
+    		return false;
+  		});
+		});
+
+	</script>
+</head>
+<body>
+	<h1>JQuery - assignment 2</h1>
+	<div id="info">
+
+	</div>
+	<form id="form">
+		From: <input type="text" id="from" />
+		<br><br>
+		Date: <input type="text" id="date" />
+		<br><br>
+		<input type="submit" id="submit" />
+	</form>
+	<div id="info">
+
+	</div>
+</body>
+</html>

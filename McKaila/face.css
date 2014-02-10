@@ -1,0 +1,25 @@
+ul{ 
+	list-style-type: none; 
+	margin: 0px; 
+	padding: 0px; 
+}
+li { 
+	height: 102px; 
+	width: 376px;
+	margin: 2px;  }
+  .ui-state-highlight { 
+  	height: 102px; 
+  }
+#ff {
+	background-color: grey;
+	margin-bottom:20px;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 5px;
+}
+body {
+	background-image: url('rPWT7.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-position: right; 
+}

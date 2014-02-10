@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+<head>
+   <title>Love</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="intro.css">
+  	<link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery-ui.css">
+  	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+ 	<script type="text/javascript" src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+ 	<script>
+      $('document').ready(function() {
+        
+          $( "#dialog").dialog();
+      
+          $( "#draggable" ).draggable();
+          $( "#droppable" ).droppable({
+             drop: function( event, ui ) {
+               alert("WIERD");
+               location.replace("homepage.html")
+            }
+         });
+
+         $('#draggable').hover(function(){
+            $('#info').text("Drop me to the hand!!").fadeToggle(2000);
+         });
+      });
+
+ 	</script>
+</head>
+<body>
+   <div id="dialog" title="O_o">
+	   <p>I can't believe it's been 6 months!!</p>
+      <img src="IMG_4272.jpg">
+   </div>
+   <div id="draggable" class="ui-widget-content">
+      <img src="IMG_4298.jpg">
+   </div>
+
+   <span id="info"></span>
+ 
+   <div id="droppable" class="ui-widget-header">
+      <img src="IMG_4299.jpg">
+   </div>
+
+</body>
+</html>

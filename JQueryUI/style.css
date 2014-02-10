@@ -1,0 +1,16 @@
+body {
+	background-image: url("ramses.jpg");
+	color: chartreuse;
+}
+#datepicker {
+	opacity: 0.6;
+}
+#tabs {
+	opacity: 0.7;
+}
+#accordion{
+	opacity: 0.7;
+}
+#dialog {
+	opacity: 0.6;
+}

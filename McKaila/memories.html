@@ -1,0 +1,151 @@
+<html>
+<head>
+	<title>Memories</title>
+  <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="memories.css">
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery-ui.css">
+   <script type="text/javascript" src="jquery-2.0.3.js"></script>
+   <script type="text/javascript" src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+
+   <script>
+    $('document').ready(function(){
+
+      $( "#tabs" ).tabs({
+      collapsible: true
+    });
+      $(".hide").hide();
+
+      $('#tabs-1 img').click(function(){
+        $(this).hide();
+        $(this).siblings().show();
+        return false;
+      });
+
+      $('#tabs-3 img').click(function(){
+        $(this).hide();
+        $(this).siblings().show();
+        return false;
+      });
+
+      $("img").hover(function(){
+         $('img').addClass('lighter');
+         $(this).removeClass('lighter');
+         $(this).addClass("cool");
+         }, function(){
+            $(this).removeClass("cool");
+            $('img').removeClass('lighter');
+      });
+
+      $('img').dblclick(function(){
+        $('img').removeClass('lighter');
+      });
+
+      $('#funny').click(function(){
+        $('#funny').attr("src","baby7.jpg");
+        });
+      $('#cute').click(function(){
+        $('#cute').attr("src","baby9.jpg");
+        });
+      $('#stupid').click(function(){
+        $('#stupid').attr("src","stupid.jpg");
+        });
+      $( ".container1" ).draggable();
+
+    });
+
+  </script>
+</head>
+
+<body>
+  <h1>Memories</h1>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Baby Michaela</a></li>
+    <li><a href="#tabs-2">Family</a></li>
+    <li><a href="#tabs-3">Us</a></li>
+    <li><a href="#tabs-4">Burning Man</a></li>
+    <li><a href="#tabs-5">Homepage</a></li>
+  </ul>
+  <div id="tabs-1">
+    <div class="container">
+    <img src="baby1.jpg" ><img class = "hide" src="baby9.jpg">
+    </div> <div class="container">
+    <img src="baby2.jpg" ><img class = "hide"src="baby7.jpg">
+   </div>  <div class="container">
+    <img src="baby12.jpg" ><img class = "hide" src="stupid.jpg">
+    </div> click top 3 ;) <br> <div class="container">
+    <img src="baby14.jpg" ><img class = "hide" src = "baby4.jpg">
+    </div>  <div class="container">
+    <img src="baby13.jpg" ><img class = "hide" src="baby3.jpg">
+   </div>  <div class="container">
+    <img src="baby6.jpg" ><img class = "hide" src="baby8.jpg">
+  </div>
+  </div>
+  <div id="tabs-2">
+    <div class="container">
+    <img src="family3.jpg" >
+    </div> <div class="container">
+    <img src="family4.jpg" >
+   </div>  <div class="container">
+    <img  src="family7.jpg" >
+    </div> double click to remove transparency <br> <div class="container">
+    <img src="family2.jpg" >
+    </div>  <div class="container">
+    <img src="family6.jpg" >
+   </div>  <div class="container">
+    <img src="family5.jpg" >
+  </div>
+ </div>
+  <div id="tabs-3">
+    <div class="container">
+    <img src="us1.jpg" ><img class = "hide" src="naughty1.jpg">
+    </div> <div class="container">
+    <img  src="us2.jpg" ><img class = "hide" src="naughty2.jpg">
+    </div>  <div class="container">
+    <img  src="us3.jpg" ><img class = "hide" src="naughty3.jpg">
+    </div> click if you're feeling naughty ;) <br> <div class="container">
+    <img src="us4.jpg" ><img class = "hide" src="naughty4.jpg">
+    </div>  <div class="container">
+    <img src="us5.jpg" ><img class = "hide" src="naughty5.jpg">
+   </div>  <div class="container">
+    <img src="us6.jpg" ><img class = "hide" src="naughty6.jpg">
+   </div>
+  </div>
+  <div id="tabs-4">
+    <div class="container1">
+    <img src="bm1.jpg" >
+    </div> <div class="container1">
+    <img  src="bm2.jpg" >
+    </div> scroll down<br> <div class="container1">
+    <img  src="bm3.jpg" >
+    </div>  <div class="container1">
+    <img src="bm4.jpg" >
+    </div> drag the pics <br> <div class="container1">
+    <img src="bm5.jpg" >
+   </div>  <div class="container1">
+    <img src="bm15.jpg" >
+   </div> <br> <div class="container1">
+    <img src="bm7.jpg" >
+   </div>  <div class="container1">
+    <img src="bm8.jpg" >
+   </div> <br> <div class="container1">
+    <img src="bm9.jpg" >
+   </div>  <div class="container1">
+    <img src="bm10.jpg" >
+   </div> <br> <div class="container1">
+    <img src="bm11.jpg" >
+   </div>  <div class="container1">
+    <img src="bm12.jpg" >
+    </div> <br> <div class="container1">
+    <img src="bm13.jpg" >
+   </div>  <div class="container1">
+    <img src="bm14.jpg" >
+   </div> 
+   </div> 
+   <div id="tabs-5">
+    <p><a href="homepage.html">Return :P</a></p>
+   </div>
+</div>
+</body>
+</html>

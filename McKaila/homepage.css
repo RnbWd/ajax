@@ -1,0 +1,46 @@
+
+
+body {
+	background-image: url('ceOF84y.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+}
+ h1 {
+	font-family: 'Caesar Dressing', cursive;
+	margin-left: 30%;
+	word-spacing: 30px;
+	opacity: 1;
+}
+#main {
+	width: 400px;
+}
+#wow{
+	opacity: 0.6;
+	position: absolute;
+	margin-left: 15%;
+	z-index: 0;
+}
+#face {
+	float: right;
+	width: 500px;
+	height: 500px;
+	opacity: 0.6;
+}
+#date {
+	margin-bottom: 10px;
+}
+#dates {
+	float: right;
+	margin-right: 5%;
+}
+.da {
+	font-family: 'Lily Script One', cursive;
+	border-radius: 5px;
+	background-color: white;
+	position: relative;
+}
+.da p {
+	color: red;
+	margin: 5px 0px;
+}

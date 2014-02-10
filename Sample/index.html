@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title>jQuery Exercise</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('document').ready(function() {
+
+		//hides h1 and p tag
+		//$('h1, p').hide();
+
+			$('#btn1').click(function() {
+				$('p').hide();
+			});
+
+			$('#btn2').click(function() {
+				$('p').show();
+			});
+
+			$('#btn3').click(function() {
+				$('p').toggle();
+			});
+			$('#btn4').click(function() {
+				$('p').slideUp();
+			});
+
+			$('#btn5').click(function() {
+				$('p').slideDown();
+			});
+
+			$('#btn6').click(function() {
+				$('p').slideToggle();
+			});
+			$('#btn7').click(function() {
+				$('p').fadeOut();
+			});
+
+			$('#btn8').click(function() {
+				$('p').fadeIn();
+			});
+
+			$('#test_form').submit(function() {
+				var email = $('#email').val();
+				var password = $('#password').val();
+				$('#message_box').html("The email you submitted was: " + email);
+				return false;
+			});
+
+			$('a').click(function(){
+				var link = $(this).attr('href');
+				alert('you clicked this ' + link);
+				return false;
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+	<h2>CodingDojo Seattle</h2>
+    <p>Hi. We are doing a morning lecture here in Bellevue WA</p>
+
+    <button id="btn1">Hide the paragraph</button>
+    <button id="btn2">Show the paragraph</button>
+    <button id="btn3">Toggle the paragraph</button>
+
+    <h2>slideDown, sludeUp, slideTogle</h2>
+    <p>Second paragraph to illustrate slide methods in jQuery</p>
+
+    <button id="btn4">slideUp the paragraph</button>
+    <button id="btn5">slideDown the paragraph</button>
+    <button id="btn6">slideToggle the paragraph</button>
+
+	<h2>fadeOut, fadeIn</h2>
+    <p>Second paragraph to illustrate fade methods in jQuery</p>
+
+    <button id="btn7">fadeOut the paragraph</button>
+    <button id="btn8">fadeIn the paragraph</button>
+
+    <h2>Text Manipulation</h2>
+
+    <div id="message_box">
+
+    </div>
+    <form id="test_form">
+    	<input type="text" name="email" id="email" placeholder="enter email address"/>
+    	<input type="password" name="password" id="password" placeholder="enter password"/>
+    	<input type="submit" value="submit" />
+    </form>
+
+    <a href="http://www.cnn.com">Go to CNN</a>
+    <a href="http://www.disney.com">Go to CNN</a>
+    <a href="http://www.espn.com">Go to CNN</a>
+
+    <h2>Other jQuery tags</h2>
+
+    <p>.append - this appends texts</p>
+    <p>.attr - get any attributes from an element</p>
+    <p>this - this particular element</p>
+    <p>.siblings - does stuff to siblings</p>
+    <p>.parent - does stuff to parents</p>
+
+</body>
+</html>

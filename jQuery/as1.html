@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Assignment 1</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="as1.css">
+
+	<script>
+		$('document').ready(function(){
+			$('img').click(function(){
+				$(this).fadeOut(400);
+			});
+			$('#btn').click(function(){
+				$('img').fadeIn(400);
+			});
+
+
+
+		});
+
+
+	</script>
+</head>
+<body>
+	<h1>JQuery - assignment 1</h1>
+	<div id="container">
+		<img src="a.jpg" alt="image">
+		<img src="b.jpg" alt="image">
+		<img src="c.jpg" alt="image">
+		<img src="d.jpg" alt="image">
+		<img src="e.jpg" alt="image">
+		<img src="f.jpg" alt="image">
+		<img src="g.jpg" alt="image">
+		<img src="h.jpg" alt="image">
+	</div>
+<button id="btn">Restore</button>
+</body>
+</html>
