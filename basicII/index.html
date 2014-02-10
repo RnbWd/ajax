@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>Weather App</title>
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      //$('#weather').submit(function(){
+        updateInfo();
+
+        function updateInfo()
+        {
+           $('select option:selected').each(function(){
+            $.get("http://api.worldweatheronline.com/free/v1/weather.ashx?&callback=?", 
+            {key: "jtpc4myth9fwxjgwz9fh5fw5", q: $('#q').val(), num_of_days: "3",format: "json"},
+            function(data) {
+            $('#hard').html(
+              "<h1>Weather for " + $('#q').val().replace('+'," ") + ":</h1>"
+              +"<p> <img src='"+ data.data.current_condition[0].weatherIconUrl[0].value + "' >   "
+              + data.data.current_condition[0].weatherDesc[0].value + "</p>"
+              +"<p>Current temp: " + data.data.current_condition[0].temp_F + "' F / " 
+              + data.data.current_condition[0].temp_C + "' C</p>"
+              +"<p>Windspeed: " + data.data.current_condition[0].windspeedMiles + " MPH </p>"
+            );
+            console.log(data);
+        }, "json");
+
+          });
+        }
+
+
+        $('#q').change(function(){
+          updateInfo();
+        });
+
+        
+        //return false;
+      //});
+    });
+  </script>
+  <style>
+  * {font-family: 'Indie Flower', cursive;}
+  </style>
+</head>
+<body>
+  <h4>Daaaaavid's weather report!</h4>
+  
+    <select id = "q">
+      <option value="Seattle">Seattle</option>
+      <option value="Houston">Houston</option>
+      <option value="New+York">New York</option>
+      <option value="San+Diego">San Diego</option>
+      <option value="Cairo">Cairo</option>
+    </select>
+    
+
+  <div id="hard">
+  </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.note {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  margin: 5px;
+}
+p {
+  clear:both;
+}

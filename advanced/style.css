@@ -1,0 +1,73 @@
+* {
+  font-family: 'Indie Flower', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+}
+#top{
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#wrapper{
+  margin-left: 10px;
+ 
+  height: 600px;
+  width: 600px;
+}
+.note {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  margin: 5px;
+  font-size: 14px;
+}
+  .edit {
+    width:90px;
+    height:79px;
+    margin: 0px;
+  }
+  .note textarea {
+    width: 90px;
+    height:79px;
+    margin-left: 5px;
+    resize: none;
+    border: none;
+    background-color: lightyellow;
+    color: maroon;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+h6{
+  display: inline;
+  margin-left: 20px;
+
+}
+h2 {
+  display: inline;
+}
+p {
+  clear:both;
+  margin-left: 5px;
+  max-width: 90px;
+  max-height:80px;
+}
+
+.delete {
+  background-color: lightyellow;
+  height: 15px;
+  display: block;
+  margin-bottom: 5px;
+}
+  .kill {
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+  }
+  .edit_button {
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+  }

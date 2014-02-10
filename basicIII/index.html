@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>Map App</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#mapit').submit(function(){
+
+        $.get($(this).attr('action'), 
+          {origin: $('#from').val(), destination: $('#to').val(), sensor: 'false'},
+          function(data) {
+            $('#hard').html("<h1>Directions from "+$('#from').val()+" to "+$('#to').val()+"</h1>")
+            $.each(data.routes[0].legs[0], function(a, val){
+              console.log(a + ": "+val);
+              if(a === 'steps') {
+                for (var i = 0; i < val.length; i++) {
+                  $('#hard').append(val[i].html_instructions+"<br>");
+                  console.log(val[i].html_instructions+"<br>");
+                }
+              }
+            });
+          }, "json");
+        return false;
+      });
+    });
+  </script>
+  <style>
+  * {font-family: 'Raleway', sans-serif}
+  b {color: red;}
+  </style>
+
+</head>
+<body>
+  <h4>Daaaaavid's direction-getter!</h4>
+  <form id="mapit" action="http://maps.googleapis.com/maps/api/directions/json?" method="get">
+    <select id = "from">
+      <option value="Seattle">Seattle</option>
+      <option value="Houston">Houston</option>
+      <option value="New+York">New York</option>
+      <option value="San+Diego">San Diego</option>
+    </select>
+     <select id = "to">
+      <option value="Bellevue">Seattle</option>
+      <option value="Houston">Houston</option>
+      <option value="New+York">New York</option>
+      <option value="San+Diego">San Diego</option>
+    </select>
+    <input type = "submit" value="submit" />
+  </form>
+  <div id="hard">
+  </div>
+</body>
+</html>
